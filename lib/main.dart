@@ -1,72 +1,59 @@
-// ignore_for_file: avoid_print, unused_local_variable
+// ignore_for_file: avoid_print
 
-// Control Flow
+// Loops!
+
 void main() {
-// If statements
+//  For loop
 
-  int age = 56;
-
-  if (age >= 21) {
-    print("Adult");
-  } else if (age >= 18) {
-    print("Voter");
-  } else {
-    print("Child");
+/*
+ i++ -> i = i+1
+ i-- -> i = i-1
+ i+=2 -> i = i+2
+*/
+  print("This is run by For loop");
+  for (int i = 1; i <= 10; i++) {
+    print("Hello Alok $i");
+    // Now see it in string
+    String hi = 'Hello World';
+    print(hi.substring(0, 4)); // methods we used later and mainly in functions
   }
 
-//  = it is assingment operator
-//  == Relational operator
-// We can nest our if statement
-
-// Now see Switch Statement
-
-  switch (age) {
-    case 34:
-      print("hello");
-
-    case 56:
-      print("not ok");
-
-    case 67:
-      print("all ok");
+  String value = "hi";
+  for (int i = 0; i < value.length; i++) {
+    print(value[i]);
   }
 
-  // Now do a question to check our knowlwdge
-
-  /* Exercise:
-    Develop a program to calculate the shipping cost based on
-    the destination zone and the weight of the package (you will be provided)
-    Calculate the shipping cost according to these condotions:
-    1.If the destination zone is "XYZ", the shipping cost is $5 per kilogram.
-    2.If the destination zone is "ABC", the shipping cost is $7 per kilogram.
-    3.If the destination zone is "PQR", the shipping cost is $10 per kilogram.
-    4.If the destination zone is not given then display an error message
-  */
-  print("Now we solve a Shipping problem.");
-  String destinationZone = "ABC";
-  double weightInkgs = 4.5;
-  double cost = 0;
-
-  if (destinationZone == "PQR") {
-    print('Shipping Cost for destination PQR is: ${weightInkgs * 10}');
-  } else if (destinationZone == "XYZ") {
-    print('Shipping Cost for destination XYZ is: ${weightInkgs * 5}');
-  } else if (destinationZone == "ABC") {
-    print('Shipping Cost for destination ABC is: ${weightInkgs * 7}');
-  } else {
-    print("invalid destination zone!");
+// WHILE LOOP
+  print("This is run by While loop");
+  String values = "Hi Alok";
+  int i = 0;
+  while (i < values.length) {
+    print(values[i]);
+    i = i + 1;
   }
-  //  We can use Switch Statement also for this kind of problems
-  // Another method by which we can remove various lines
-  print("Now new method");
-  if (destinationZone == "PQR") {
-    cost = weightInkgs * 10;
-  } else if (destinationZone == "XYZ") {
-    cost = weightInkgs * 5;
-  } else if (destinationZone == "ABC") {
-    cost = weightInkgs * 7;
-  } else {
-    print("invalid destination zone!");
-  }
-  print('Shipping Cost: $cost');
+
+  // Do While:
+  // in (do while) loop first we run once and then after that we check condition.
+  print("This is run by do while loop");
+  String run = "Pihu";
+  int a = 0;
+  do {
+    print(run[a]);
+    a++;
+  } while (a < run.length);
 }
+
+/* For loop vs While loop
+ For loop:
+ 1. The for loop is used for defined loops when the number of iterations is known.
+ 2. For loops can have their counter variables declared in the decleration itself.
+ 3. This is preferable when we know exactly how many times the loop will be repeated.
+ 4. The loop iterates infinite numbers of times if the conditions is not specified.
+
+ For While loop:
+ 1.The while loop is used when the number of iteration is not known.
+ 2. There is no build-in loop control variable with a while loop.
+ 3. The while loop will continue to run infinite number of times until the condition is met.
+ 4. If  the condition is not specified, it shows a compilations error.
+
+ */
