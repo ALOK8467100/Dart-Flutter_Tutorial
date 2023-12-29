@@ -1,8 +1,3 @@
-// from now we start our dart and flutter learning
-// now dart
-
-// Loops
-
 // ignore_for_file: avoid_print, unused_local_variable
 
 // Control Flow
